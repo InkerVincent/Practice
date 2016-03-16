@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>home</title>
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+	<div id="wrapper">
+	<div class="header">
+		<span>
+			<form method="get" id="searchform" action="#">
+				<fieldset>
+					<input id="s" name="s" type="text" value="关键词" class="text_input" onblur="if(this.value==''){this.value='关键词';}" onfocus="if(this.value =='关键词') {this.value=''; }" />
+					<input name="submit" type="submit"  value="" />
+				</fieldset>
+			</form>
+		</span>
+			<span>
+				<section class="job-module"> 
+				<dl class="retrie"> 
+					<dt>
+						<a id="area" href="javascript:;">分类筛选 </a>
+					</dt> 
+					<dd class="area"> 
+						<ul class="slide downlist"> 
+							<li><a href="#">不限</a></li> 
+							<li><a href="#">销售</a></li> 
+							<li><a href="#">会计</a></li> 
+							<li><a href="#">文员</a></li> 
+							<li><a href="#">程序</a></li> 
+							<li><a href="#">金融</a></li> 
+						</ul> 
+					</dd> 
+				</dl> 
+			</section> 
+		</span>
+	</div>
+	<div class="text">
+			<div class="title">
+				<i class="fa fa-star"></i> 为你推荐
+			</div>
+			<a href="http://www.baidu.com">
+			<div class="card">
+				<div class="thumb">
+					<img src="images/aaa.jpg">
+				</div >
+				<div class="information">
+					<span class="name">李大牛</span>
+					<span class="note">供应商资源</span>
+					<span class="info">阿里巴巴  |  产品经理  |  互联网行业</span>
+					<span class="tag"><i class="fa fa-tag"></i>大数据  <i class="fa fa-tag"></i>云计算  <i class="fa fa-tag"></i>大数据</span>
+				</div>
+			</div>
+			</a>
+			<a href="#">
+			<div class="card">
+				<div class="thumb">
+					<img src="images/aaa.jpg">
+				</div >
+				<div class="information">
+					<span class="name">李大牛</span>
+					<span class="note">供应商资源</span>
+					<span class="info">阿里巴巴  |  产品经理  |  互联网行业</span>
+					<span class="tag"><i class="fa fa-tag"></i>大数据  <i class="fa fa-tag"></i>云计算  <i class="fa fa-tag"></i>大数据</span>
+				</div>
+			</div>
+			</a>
+			<a href="#">
+			<div class="card">
+				<div class="thumb">
+					<img src="images/aaa.jpg">
+				</div >
+				<div class="information">
+					<span class="name">李大牛</span>
+					<span class="note">供应商资源</span>
+					<span class="info">阿里巴巴  |  产品经理  |  互联网行业</span>
+					<span class="tag"><i class="fa fa-tag"></i>大数据  <i class="fa fa-tag"></i>云计算  <i class="fa fa-tag"></i>大数据</span>
+				</div>
+			</div>
+			</a>
+			<a href="#">
+			<div class="card">
+				<div class="thumb">
+					<img src="images/aaa.jpg">
+				</div >
+				<div class="information">
+					<span class="name">李大牛</span>
+					<span class="note">供应商资源</span>
+					<span class="info">阿里巴巴  |  产品经理  |  互联网行业</span>
+					<span class="tag"><i class="fa fa-tag"></i>大数据  <i class="fa fa-tag"></i>云计算  <i class="fa fa-tag"></i>大数据</span>
+				</div>
+			</div>
+			</a>
+			<a href="#">
+			<div class="card">
+				<div class="thumb">
+					<img src="images/aaa.jpg">
+				</div >
+				<div class="information">
+					<span class="name">李大牛</span>
+					<span class="note">供应商资源</span>
+					<span class="info">阿里巴巴  |  产品经理  |  互联网行业</span>
+					<span class="tag"><i class="fa fa-tag"></i>大数据  <i class="fa fa-tag"></i>云计算  <i class="fa fa-tag"></i>大数据</span>
+				</div>
+			</div>
+			</a>
+			<div class="foot">
+				<a herf="#">换一波</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script> 
+	<script type="text/javascript">
+	$(function(){ 
+		$('.retrie dt a').click(function(){
+			var $t=$(this);
+			if($t.hasClass('up')){
+				$(".retrie dt a").removeClass('up');
+				$('.downlist').hide();
+				$('.mask').hide();
+			}else{
+				$(".retrie dt a").removeClass('up');
+				$('.downlist').hide();
+				$t.addClass('up');
+				$('.downlist').eq($(".retrie dt a").index($(this)[0])).show();
+				$('.mask').show();
+			}
+		});
+		$(".area ul li a:contains('"+$('#area').text()+"')").addClass('selected');
+	});
+	</script> 
+</body>
